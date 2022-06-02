@@ -23,12 +23,12 @@ class PostController {
   };
 
   create = async (
-    req: RequestWithBody<Post>,
+    req: Request,
     res: Response<Post | ResponseError>,
   ): Promise<typeof res> => {
-    const { body } = req;
+    const { file } = req;
     try {
-      const post = await this.service.create(body);
+      const post = await this.service.create(file);
       if (!post) {
         return res.status(500).json({ error: this.errors.internal });
       }

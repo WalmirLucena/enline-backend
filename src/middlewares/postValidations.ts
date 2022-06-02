@@ -1,9 +1,9 @@
 import multer from 'multer';
 import crypto from 'crypto';
 import path from 'path';
-import { Request } from 'express';
+import { Request, Express } from 'express';
 
-const imageFilter = (req: Request, file: any, cb: any) => {
+const imageFilter = (req: Request, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
   const allowedMimes = [
     'image/jpeg',
     'image/pjpeg',
@@ -14,7 +14,7 @@ const imageFilter = (req: Request, file: any, cb: any) => {
   if (allowedMimes.includes(file.mimetype)) {
     cb(null, true);
   } else {
-    cb('Please upload only images.', false);
+    cb(null, false);
   }
 };
 const storage = multer.diskStorage({

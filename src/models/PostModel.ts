@@ -17,8 +17,15 @@ const PostSchema = new Schema<PostDocument>({
 class PostModel {
   constructor(public model = mongoose.model('post', PostSchema)) {}
 
-  async create(obj: Post): Promise<Post> {
-    const result = await this.model.create({ ...obj });
+  async create(obj: any): Promise<Post> {
+    const { originalname: name, size, filename: key } = obj;
+    const result = await this.model.create({
+      name,
+      size,
+      key,
+      url: '',
+
+    });
     return result;
   }
 
