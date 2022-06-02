@@ -1,6 +1,7 @@
 import express, { Router } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import path from 'path';
 import connectToDatabase from './models/connection';
 
 class App {
@@ -19,6 +20,7 @@ class App {
   }
 
   public addRouter(router: Router) {
+    this.app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads')));
     this.app.use(router);
   }
 }
