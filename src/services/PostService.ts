@@ -15,12 +15,6 @@ class PostService {
   }
 
   public async create(obj: any): Promise<Post | null | ServiceError> {
-    /* const parsed = PostSchema.safeParse(obj);
-
-    if (!parsed.success) {
-      return { error: parsed.error };
-    } */
-
     const item = await this.model.create(obj);
 
     return item;
