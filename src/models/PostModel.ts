@@ -15,6 +15,12 @@ const PostSchema = new Schema<PostDocument>({
   },
 });
 
+PostSchema.pre('save', function () {
+  if (!this.url) {
+    this.url = `${process.env.APP_URL}/files/${this.key}`;
+  }
+});
+
 class PostModel {
   constructor(public model = mongoose.model('post', PostSchema)) {}
 
