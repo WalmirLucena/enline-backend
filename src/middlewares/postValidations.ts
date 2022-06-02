@@ -9,6 +9,9 @@ const imageFilter = (req: Request, file: Express.Multer.File, cb: multer.FileFil
     'image/pjpeg',
     'image/png',
     'image/gif',
+    'application/pdf',
+    'application/vnd.ms-powerpoint',
+    'application/msword',
 
   ];
   if (allowedMimes.includes(file.mimetype)) {

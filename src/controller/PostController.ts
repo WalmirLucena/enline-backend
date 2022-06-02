@@ -1,9 +1,8 @@
-import { Request, Response } from 'express';
+import { Request, Response, Express } from 'express';
 import PostService from '../services/PostService';
 import { Post } from '../interfaces/PostInterface';
 import ControllerErrors from '../utils/ControllerEnum';
 import { ResponseError } from '../utils/ResponseError';
-import { RequestWithBody } from '../interfaces/ResponseInterface';
 
 class PostController {
   protected errors = ControllerErrors;
@@ -28,7 +27,7 @@ class PostController {
   ): Promise<typeof res> => {
     const { file } = req;
     try {
-      const post = await this.service.create(file);
+      const post = await this.service.create(file as Express.Multer.File);
       if (!post) {
         return res.status(500).json({ error: this.errors.internal });
       }
