@@ -4,3 +4,5 @@ enum ControllerErrors {
     requiredId = 'Id is required',
     badRequest = 'Bad request',
   }
+
+export default ControllerErrors;
