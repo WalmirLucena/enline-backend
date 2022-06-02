@@ -20,7 +20,7 @@ const PostSchema = z.object({
   createdAt: z.date({
     required_error: 'createdAt is required',
     invalid_type_error: 'createdAt must be a date',
-  })
+  }),
 });
 
 type Post = z.infer<typeof PostSchema>;
