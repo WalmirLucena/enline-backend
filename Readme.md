@@ -6,13 +6,47 @@
 
 - [x]  Configurar o ambiente de Desenvolvimento em Node + Typescript
 - [x]  Desenvolver a estrutura de Arquivos da Api
-- [ ]  Configurar conexão com o MongoDB
-- [ ]  Criar Banco de Dados No CloudAtlas
-- [ ]  Desenvolver camada Model
-- [ ]  Desenvolver camada Service
-- [ ]  Desenvolver camada Controller
-- [ ]  Desenvolver Rotas
-- [ ]  Verificar Devido funcionamento das camadas
-- [ ]  Testes Unitários
+- [x]  Configurar conexão com o MongoDB
+- [x]  Criar Banco de Dados No CloudAtlas
+- [x]  Desenvolver camada Model
+- [x]  Desenvolver camada Service
+- [x]  Desenvolver camada Controller
+- [x]  Desenvolver Rotas
+- [x]  Verificar Devido funcionamento das camadas
+- [x]  Testes Unitários
 - [ ]  Docker
 - [ ]  Documentar em Swagger
+
+
+## Executando a aplicação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/WalmirLucena/ebytr-task-list
+```
+Navegue até o diretório do projeto:
+
+Instalando as dependências:
+
+```bash
+npm install
+```
+Iniciando a aplicação:
+
+
+```bash
+npm start
+```
+## Testando a aplicação
+
+Executando os testes:
+
+```bash
+npm run test
+```
+Mostrando a cobertura dos testes da aplicação:
+
+```bash
+npm run test:coverage
+```
