@@ -14,8 +14,9 @@
 - [x]  Desenvolver Rotas
 - [x]  Verificar Devido funcionamento das camadas
 - [x]  Testes Unitários
-- [ ]  Docker
+- [x]  Docker
 - [ ]  Documentar em Swagger
+- [x]  Deploy Heroku
 
 
 ## Executando a aplicação
@@ -50,3 +51,7 @@ Mostrando a cobertura dos testes da aplicação:
 ```bash
 npm run test:coverage
 ```
+## Deploy Heroku
+
+O deploy no heroku pode ser acessado pela seguinte url https://enline-upload-backend.herokuapp.com/post
+
