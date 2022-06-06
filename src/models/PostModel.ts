@@ -24,7 +24,8 @@ PostSchema.pre('save', function () {
 class PostModel {
   constructor(public model = mongoose.model('post', PostSchema)) {}
 
-  async create(obj: Express.Multer.File): Promise<Post> {
+  async create(obj: any): Promise<Post> {
+    console.log(obj);
     const { originalname: name, size, filename: key } = obj;
     const result = await this.model.create({
       name,

@@ -17,3 +17,16 @@ export const fileMockList = [{
   createdAt: '2022-06-04T16:00:30.897Z',
   __v: 0,
 }];
+
+export const fileBody = {
+  fieldname: 'file',
+  originalname: 'iphone.jpg',
+  encoding: '7bit',
+  mimetype: 'image/jpeg',
+  destination: '/home/walmir/ProjetosExtras/desafios_tecnicos/challenge-enline/backend/dist/tmp/uploads',
+  filename: '5ec2babf94229334125eedcd66d65ddd-iphone.jpg',
+  path: '/home/walmir/ProjetosExtras/desafios_tecnicos/challenge-enline/backend/dist/tmp/uploads/5ec2babf94229334125eedcd66d65ddd-iphone.jpg',
+  size: 69372,
+  buffer: '',
+  stream: '',
+};
