@@ -24,7 +24,7 @@
 Clone o repositório:
 
 ```bash
-git clone https://github.com/WalmirLucena/ebytr-task-list
+git clone git@github.com:WalmirLucena/enline-backend.git
 ```
 Navegue até o diretório do projeto:
 
