@@ -27,7 +27,7 @@ class PostController {
   ): Promise<typeof res> => {
     const { file } = req;
     try {
-      const post = await this.service.create(file as Express.Multer.File);
+      const post = await this.service.create(file as any);
       if (!post) {
         return res.status(500).json({ error: this.errors.internal });
       }

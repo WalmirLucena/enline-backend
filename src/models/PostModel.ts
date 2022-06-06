@@ -1,5 +1,4 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { Express } from 'express';
 import { Post } from '../interfaces/PostInterface';
 
 interface PostDocument extends Post, Document {}
@@ -25,7 +24,6 @@ class PostModel {
   constructor(public model = mongoose.model('post', PostSchema)) {}
 
   async create(obj: any): Promise<Post> {
-    console.log(obj);
     const { originalname: name, size, filename: key } = obj;
     const result = await this.model.create({
       name,

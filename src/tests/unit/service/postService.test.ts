@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import * as Sinon from 'sinon';
-import PostModel from '../../../models/PostModel';
+import PostService from '../../../services/PostService';
 import { fileBody, fileMock, fileMockList } from '../../mocks/fileMock';
 
 describe('Post Model Test', () => {
 
-  let Post = new PostModel();
+  let Post = new PostService();
   describe('Create a Post with correct data', () => {
     before(() => {
         Sinon.stub(Post.model, 'create').resolves(fileMock as any);
@@ -25,7 +25,7 @@ describe('Post Model Test', () => {
 
 describe('Get Posts with correct data', () => {
   before(() => {
-      Sinon.stub(Post.model, 'find').resolves(fileMockList);
+      Sinon.stub(Post.model, 'read').resolves(fileMockList as any[]);
   });
 
 
@@ -39,10 +39,11 @@ describe('Get Posts with correct data', () => {
   });
   })
 
+  
 describe('Delete one Post by Id', () => {
     describe('When the Post exist', () => {
         before(() => {
-        Sinon.stub(Post.model, 'findByIdAndDelete').resolves(fileMock as any);
+        Sinon.stub(Post.model, 'delete').resolves(fileMock as any);
     });
 
     after(() => {

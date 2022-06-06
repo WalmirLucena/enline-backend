@@ -15,7 +15,7 @@ class PostService {
     return items;
   }
 
-  public async create(obj: Express.Multer.File): Promise<Post | null | ServiceError> {
+  public async create(obj: any): Promise<Post | null | ServiceError> {
     const item = await this.model.create(obj);
 
     return item;
